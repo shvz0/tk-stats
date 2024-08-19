@@ -1,0 +1,9 @@
+/bin
+/config
+/data
+/docker-compose.yml
+/public
+/src
+/var
+/vendor
+
