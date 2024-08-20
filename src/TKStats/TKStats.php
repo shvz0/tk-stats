@@ -23,8 +23,6 @@ class TKStats
         $response = $this->httpClient->get("/player/$playerId");
         $htmlBody = (string) $response->getBody();
 
-        // file_put_contents('test.html', $htmlBody);
-        // $htmlBody = file_get_contents('test.html');
         $xpath = $this->getDomXpathByHtmlBody($htmlBody);
 
         $trElements = $xpath->query('/html/body/main/div/table/tbody/tr');

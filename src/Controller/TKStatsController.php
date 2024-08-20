@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Attribute\Route;
 class TKStatsController extends AbstractController
 {
     #[Route('/replays/{playerId}', methods: ['GET'])]
-    public function show(int $playerId): JsonResponse
+    public function show(string $playerId): JsonResponse
     {
         $tkStats = new TKStats();
         return $this->json($tkStats->getWavuPlayerStats($playerId));
